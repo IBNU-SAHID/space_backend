@@ -5,9 +5,7 @@
 development:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: your_app_development
-  allowed_request_origins:
-    - "http://localhost:5173
+  channel_prefix: app_development
 
 
 test:
