@@ -85,9 +85,12 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: space_backend_production
-    username: space_backend
-    password: <%= ENV["SPACE_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  host: <%= ENV["PGHOST"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  port: <%= ENV["PGPORT"] %>
   cache:
     <<: *primary_production
     database: space_backend_production_cache
